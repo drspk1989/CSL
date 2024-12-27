@@ -1,0 +1,110 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="citation-style" version="1.0">
+  <info>
+    <title>Journal of Inorganic and Organometallic Polymers and Materials</title>
+    <id>http://www.zotero.org/styles/jioom</id>
+    <link href="https://www.springer.com/journal/10904" rel="documentation"/>
+    <author>
+      <name>Your Name</name>
+      <email>your.email@example.com</email>
+    </author>
+    <category citation-format="numeric"/>
+    <category field="chemistry"/>
+    <updated>2024-12-27</updated>
+  </info>
+
+  <macro name="author">
+    <names variable="author">
+      <name form="short"/>
+      <label prefix=", " form="short"/>
+    </names>
+  </macro>
+
+  <macro name="editor">
+    <names variable="editor">
+      <name form="short"/>
+      <label prefix=", ed. by " form="short"/>
+    </names>
+  </macro>
+
+  <macro name="title">
+    <text variable="title"/>
+  </macro>
+
+  <macro name="container-title">
+    <text variable="container-title" form="short" font-style="italic"/>
+  </macro>
+
+  <macro name="issued">
+    <date variable="issued">
+      <date-part name="year"/>
+    </date>
+  </macro>
+
+  <citation>
+    <layout prefix="[" suffix="]" delimiter=", ">
+      <text variable="citation-number"/>
+    </layout>
+  </citation>
+
+  <bibliography>
+    <layout suffix="." delimiter="">
+      <group delimiter=" ">
+        <text macro="author"/>
+        <text macro="title" prefix=", "/>
+        <text macro="container-title"/>
+        <group delimiter=" ">
+          <text variable="volume"/>
+          <text variable="page" prefix=", "/>
+        </group>
+        <text macro="issued" prefix=" (" suffix=")"/>
+        <text variable="DOI" prefix=" https://doi.org/"/>
+        <text variable="publisher" prefix=", (" suffix=")"/>
+        <text variable="URL" prefix=", " suffix="."/>
+      </group>
+    </layout>
+  </bibliography>
+
+  <macro name="book">
+    <group delimiter=", ">
+      <text macro="author"/>
+      <text variable="title" font-style="italic"/>
+      <text variable="edition" prefix=", " suffix=" edn."/>
+      <group delimiter=", ">
+        <text variable="publisher"/>
+        <text variable="publisher-place"/>
+      </group>
+      <text macro="issued" prefix=" (" suffix=")"/>
+      <text variable="page" prefix=", pp. " suffix="."/>
+    </group>
+  </macro>
+
+  <macro name="book-chapter">
+    <group delimiter=", ">
+      <text macro="author"/>
+      <text variable="title"/>
+      <group delimiter="">
+        <text macro="editor"/>
+        <text variable="container-title" prefix=", in "/>
+      </group>
+      <group delimiter=", ">
+        <text variable="publisher"/>
+        <text variable="publisher-place"/>
+      </group>
+      <text macro="issued" prefix=" (" suffix=")"/>
+      <text variable="page" prefix=", p. " suffix="."/>
+    </group>
+  </macro>
+
+  <macro name="online">
+    <group delimiter=", ">
+      <text macro="author"/>
+      <text variable="title" font-style="italic"/>
+      <text variable="publisher" prefix=" (" suffix=", "/>
+      <text macro="issued" prefix=" " suffix=")"/>
+      <text variable="URL" prefix="" suffix="."/>
+      <text variable="accessed" prefix=" Accessed " suffix="."/>
+    </group>
+  </macro>
+</style>
